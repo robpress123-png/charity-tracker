@@ -1,0 +1,19 @@
+ name = "charity-tracker-api-full"
+  main = "src/index.js"
+  compatibility_date = "2024-08-01"
+
+  # D1 Database
+  [[d1_databases]]
+  binding = "DB"
+  database_name = "charity-tracker-db"
+  database_id = "6e49238f-4980-4ad9-a74d-38158cc287b5"
+
+  # KV Storage for sessions
+  [[kv_namespaces]]
+  binding = "SESSIONS"
+  id = "your-kv-namespace-id"
+
+  # Environment variables
+  [vars]
+  ENVIRONMENT = "development"
+  ENABLE_PAYMENT_ENFORCEMENT = "false"
