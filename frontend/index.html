@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Charity Tracker - Track your charitable donations for tax purposes" />
+    <meta name="keywords" content="charity, donations, tax deductions, non-profit, giving" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon and app icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://charity-tracker.pages.dev/" />
+    <meta property="og:title" content="Charity Tracker - Track Your Donations" />
+    <meta property="og:description" content="Easily track your charitable donations for tax purposes. Support 5 donation types with automatic tax calculations." />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Charity Tracker - Track Your Donations" />
+    <meta property="twitter:description" content="Easily track your charitable donations for tax purposes. Support 5 donation types with automatic tax calculations." />
+
+    <title>Charity Tracker - Track Your Donations</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* Critical CSS for initial render */
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      /* Loading spinner */
+      .loading-spinner {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Initial loading state */
+      .app-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        gap: 1rem;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading fallback -->
+    <div id="root">
+      <div class="app-loading">
+        <div class="loading-spinner"></div>
+        <p>Loading Charity Tracker...</p>
+      </div>
+    </div>
+
+    <!-- Main application script -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
