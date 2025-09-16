@@ -1,5 +1,5 @@
 name = "charity-tracker-api-full"
-  main = "src/index.js"
+  main = "workers/src/index.js"
   compatibility_date = "2024-08-01"
 
   # D1 Database
@@ -17,3 +17,4 @@ name = "charity-tracker-api-full"
   [vars]
   ENVIRONMENT = "development"
   ENABLE_PAYMENT_ENFORCEMENT = "false"
+
